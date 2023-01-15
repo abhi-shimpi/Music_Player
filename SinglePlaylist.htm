@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Single Playlist</title>
+    <link rel="stylesheet" href="Singleplaylist-style.css" type="text/css">
+
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <section id="navbar">
+
+        <!-- Small Navbar -->
+        <div id="sm-nav">
+            <div id="sm-nav1">
+                <div id="sm-brand-logo">
+                    <img src="Assets/logo/logo3.jpg" alt="">
+                </div>
+                <div id="sm-brand-nm">
+                    <p class="text-color1">Ninja</p>
+                    <h4 class="text-color2">Studio</h4>
+                </div>
+            </div>
+
+            <div id="hamburger-ls">
+                <div class="hambarger">
+                    <i class="fas fa-bars bar text-color1" style="font-size: 2.5rem;">
+                    </i>
+                </div>
+                <div class="hamburger-content text-color1">
+                    <div class="sm-profile">
+                        <div class="sm-profile-img">
+                            <img src="Assets/Artists/Trey.jpg" alt="">
+                        </div>
+                        <div class="sm-profile-nm">
+                            <h3>Profile</h3>
+                        </div>
+                    </div>
+                    <ul id="nav-ls" type="none">
+                        <li><b>Favourites</b></li>
+                        <li>Queue</li>
+                        <li>Search</li>
+                        <li>Notification</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="nav">
+            <div id="nav1">
+                <div id="brand-logo">
+                    <img src="Assets/logo/logo3.jpg" alt="">
+                </div>
+                <div id="brand-nm">
+                    <p class="text-color1">Ninja</p>
+                    <h4 class="text-color2">Studio</h4>
+                </div>
+                <div id="fav">
+                    <p class="text-color1">Favourites</p>
+                </div>
+            </div>
+            <div id="nav2">
+                <div id="search-sec">
+                    <div class="text-align" id="search-img"><i class="fas fa-search"></i></div>
+                    <div id="search-box">
+                        <form action="">
+                            <input type="text" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="text-align" id="microphone">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                </div>
+                <div class="text-align" id="alert"><i class="fas fa-bell" style="font-size: 3rem;"></i></div>
+                <div id="profile">
+                    <img src="Assets/logo/p.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <section>
+        <div class="main">
+            <div id="d1">
+                <!-- card -->
+                <div id="card">
+                    <div id="card-img">
+                        <!-- <img src="Assets/Artists/coldplay2.jpg" alt="">
+                  -->
+                    </div>
+                    <div id="card-details">
+                        <div id="card-nm">
+                            <div id="card-nm-title">
+                                <h1 style="font-weight: 500; ;" class="text-color2">ColdPlay</h1>
+                                <P class="text-color1">British Band</P>
+                            </div>
+                            <div id="card-nm-follow" class="text-color1">85k Followers</div>
+                        </div>
+                        <div id="card-discp" class="text-color1">
+                            Coldplay are a British rock band formed in London in 1996. The performing members comprise
+                            vocalist,
+                            rhythm guitarist and pianist Chris Martin, lead guitarist Jonny Buckland, bassist Guy
+                            Berryman,
+                            and
+                            drummer Will Champion. They met at University College London and began playing music
+                            together
+                            from 1996
+                            to 1998, first calling themselves Pectoralz and then Starfish before finally changing their
+                            name
+                            to
+                            Coldplay.
+                        </div>
+                        <div id="card-btn">
+                            <button class="text-color2"> Play All</button>
+                            <span style="margin-left:3rem;" class="text-color2">Follow</span>
+                        </div>
+                        <div id="card-tracks" class="text-color2">341 Tracks | 78 Albums</div>
+                    </div>
+
+
+                </div>
+
+                <!-- Main artist song -->
+
+                <div id="main-artist-song-ls">
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>01</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/stracks.jpg" alt="">
+                                <div class="onclick-song-bar2"><i class="fas fa-play " onclick="smplayer()"></i></div>
+                                <div id="hey1">
+                                    <audio controls id="audio-player">
+                                        <source src="Assets/Audio/a1.mpeg" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Single Ladies</h4>
+                                <p>Beyonce</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>02</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/imagine.jpg" alt="">
+                                <!-- <div class="onclick-song-bar2"><i class="fas fa-play " onclick="smplayer()"></i></div> -->
+                                <!-- <div id="hey1">
+                                <audio controls id="audio-player">
+                                    <source src="Assets/Audio/a1.mpeg" type="audio/mpeg">
+                                </audio>
+                            </div> -->
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Umbrella</h4>
+                                <p>Jay-Z</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>03</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/street.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Shake it Off</h4>
+                                <p>Taylor Swift</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>04</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/car.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Toxic</h4>
+                                <p>Britney Spears</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>05</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/eve.jpeg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Rolling </h4>
+                                <p>Adele</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>06</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/desert.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>07</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/legion.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>08</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/miss u.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>09</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>10</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="main-artist-songs">
+                        <div class="artist-song">
+                            <div class="main-artist-srno">
+                                <p>11</p>
+                            </div>
+                            <div class="main-artist-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="main-artist-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="main-artist-heart">
+                            <div id="heart-sec1"><i class="far fa-heart text-red"></i></div>
+                            <div id="heart-sec2"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="d2">
+
+                <!-- Similar-artist -->
+                <div id="latest-release">
+                    <div class="side-bar-Que">
+                        <div class="title text-color2">
+                            Similar Artists
+                        </div>
+                        <div class="sm-title text-color1">
+                            <p>View All</p>
+                        </div>
+                        <!-- <div class="q-icon">
+                        <i class="fas fa-chevron-down" onclick="QueFunction()"></i>
+                    </div> -->
+                    </div>
+                    <div id="latest-release-songs-list">
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1" onclick="myFunction1()"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1" onclick="myFunction2()"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="side-bar-Que">
+                    <div class="title text-color2">
+                        Recently Played
+                    </div>
+                    <div class="sm-title text-color1">
+                        <p>View All</p>
+                    </div>
+                </div>
+                <div id="side-bar-song-ls">
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>01</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/imagine.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>02</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/legion.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>03</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/miss u.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>04</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/old school.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>05</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/street.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>06</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/relax.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        // JS
+        // Song Bar
+        function smplayer() {
+
+            var a1 = document.getElementById("hey1");
+
+            if (a1.style.display == "none") {
+
+                a1.style.display = "block";
+            }
+            else {
+
+                a1.style.display = "none";
+            }
+
+        }
+
+    </script>
+
+    <!-- javascript -->
+    <script>
+        function QueFunction() {
+            var t = document.getElementById("sm-title");
+            var i = document.getElementById("q-icon")
+            var q = document.getElementById("onclick-ls2");
+            if (q.style.display == "none") {
+                q.style.display = "block";
+            }
+            else {
+                q.style.display = "none";
+            }
+            i.style.color = "green";
+            t.style.color = "green";
+        }
+    </script>
+</body>
+
+</html>

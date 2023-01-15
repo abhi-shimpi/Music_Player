@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+   
+</head>
+
+<body>
+    <!-- In this page there two sectio Navbar and Main Section
+        Navbar section contains 1) Normal Navbar 2)Small Navbar
+        Main Section is Divided into two parts 1) d1 and 2) d2  3)Song bar -->
+
+    <!-- d1 Section Contains Carousel , Latest Release , Popular Artist, Stations ,Zoom-in ,Latest-englsh,
+            Latest-Hindi,Latest-marathi -->
+    <!-- d2 Section Contains Side-bar-Que Section -->
+    <!-- Song bar - In song bar play and pause button is Working . Also I have Created shorthand Song bar
+                    for music controls. In Case if on opening page content is seeming little bit bigger 
+                    plz zoom out😊 -->
+    
+    <section id="navbar">
+
+        <!-- Small Navbar -->
+        <div id="sm-nav">
+            <div id="sm-nav1">
+                <div id="sm-brand-logo">
+                    <img src="Assets/logo/logo3.jpg" alt="">
+                </div>
+                <div id="sm-brand-nm">
+                    <p class="text-color1">Ninja</p>
+                    <h4 class="text-color2">Studio</h4>
+                </div>
+            </div>
+
+            <div id="hamburger-ls">
+                <div class="hambarger">
+                    <i class="fas fa-bars bar text-color1" style="font-size: 2.5rem;">
+                    </i>
+                </div>
+                <div class="hamburger-content text-color1">
+                    <div class="sm-profile">
+                        <div class="sm-profile-img">
+                            <img src="Assets/Artists/Trey.jpg" alt="">
+                        </div>
+                        <div class="sm-profile-nm">
+                            <h3>Profile</h3>
+                        </div>
+                    </div>
+                    <ul id="nav-ls" type="none">
+                        <li><b>Favourites</b></li>
+                        <li onclick="QueDisplay()">Queue</li>
+                        <li>Search</li>
+                        <li>Notification</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Normal Navbar -->
+        <div id="nav">
+            <div id="nav1">
+                <div id="brand-logo">
+                    <img src="Assets/logo/logo3.jpg" alt="">
+                </div>
+                <div id="brand-nm">
+                    <p class="text-color1">Ninja</p>
+                    <h4 class="text-color2">Studio</h4>
+                </div>
+                <div id="fav">
+                    <p class="text-color1">Favourites</p>
+                </div>
+            </div>
+            <div id="nav2">
+                <div id="search-sec">
+                    <div class="text-align" id="search-img"><i class="fas fa-search"></i></div>
+                    <div id="search-box">
+                        <form action="">
+                            <input type="text" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="text-align" id="microphone">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                </div>
+                <div class="text-align" id="alert"><i class="fas fa-bell" style="font-size: 3rem;"></i></div>
+                <div id="profile">
+                    <img src="Assets/logo/p.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main">
+
+            <!-- d1 section -->
+            <div id="d1">
+
+                <!-- Carousel Section -->
+                <div id="carousel">
+                    <div class="c_img">
+                        <img src="Assets/carousel images/music-event-poster-template-with-colorful-shapes_1361-1591.jpg"
+                            alt="">
+                    </div>
+                    <div class="c_img">
+                        <img src="Assets/carousel images/C5.jpg" alt="">
+                    </div>
+                    <div class="c_img">
+                        <img src="Assets/carousel images/C4.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- Latest Release -->
+                <!-- In case if on 1st click song wont be displayed, plz double click😅 -->
+                <div id="latest-release">
+                    <div class="headings">Latest Release</div>
+                    <div id="latest-release-songs-list">
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                                <div class="onclick-song-bar"><i class="fas fa-play " onclick="Audio()"></i></div>
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">On and On</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1" onclick="myFunction1()"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                                <div class="onclick-song-bar1"><i style="font-size: 2.8rem; color: rgb(87, 42, 42);"
+                                        class="fas fa-play " onclick="smplayer()"></i></div>
+                                <div id="hey1">
+                                    <audio controls id="audio-player">
+                                        <source src="Assets/Audio/a1.mpeg" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1" onclick="myFunction2()"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-release-songs">
+                            <div class="song-img">
+                                <img src="Assets/onism.jpg" alt="">
+                            </div>
+                            <div class="song-nm">
+                                <h3 class="text-color2" style="margin-bottom: -8px;">Onism</h3>
+                                <p class="text-color1"> AUG 11,2021</p>
+                            </div>
+                            <div class="list-n-time">
+                                <i class="fas fa-ellipsis-h text-color1"></i>
+                                <p class="text-color1">4:15</p>
+                            </div>
+                        </div>
+
+                        <!--Onclick List  1st -->
+                        <div id="onclick1-list1">
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Play Now
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Add To Queue
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Add To Favourites
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Get Info
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Onclick List 2nd -->
+                        <div id="onclick2-list1">
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Play Now
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Add To Queue
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Add To Favourites
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="ls1">
+                                <div class="ls1-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="ls1-title">
+                                    Get Info
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- popular Artist -->
+                <div id="popular-artist">
+                    <div class="headings">Popular Artists</div>
+                    <div id="artists-sec">
+                        <div class="artist">
+                            <div class="artist-img">
+                                <img src="Assets/Artists/ed.jpg" alt="">
+                                <div class="pause-btn"><a href="SinglePlaylist.htm" target="_blank"><i class="fas fa-play "
+                                            style="font-size: 3rem;"></i></a> </div>
+                            </div>
+                            <div class="artist-nm text-align">
+                                <h3>Ed Sheeran</h3>
+                            </div>
+                        </div>
+
+                        <div class="artist">
+                            <div class="artist-img">
+                                <img src="Assets/Artists/Corbyn-Besson.jpg" alt="">
+                                <div class="pause-btn"><a href="SinglePlaylist.htm" target="_blank"><i class="fas fa-play "
+                                            style="font-size: 3rem;"></i></a> </div>
+                            </div>
+                            <div class="artist-nm text-align">
+                                <h3>Corbyn Besson</h3>
+                            </div>
+                        </div>
+
+                        <div class="artist">
+                            <div class="artist-img">
+                                <img src="Assets/Artists/coldplay3.jpg" alt="">
+                                <div class="pause-btn"><a href="SinglePlaylist.htm" target="_blank"><i class="fas fa-play "
+                                            style="font-size: 3rem;"></i></a> </div>
+                            </div>
+                            <div class="artist-nm text-align">
+                                <h3>ColdPlay</h3>
+                            </div>
+                        </div>
+
+                        <div class="artist">
+                            <div class="artist-img">
+                                <img src="Assets/Artists/Shawn Mendes.jpg" alt="">
+                                <div class="pause-btn"><a href="SinglePlaylist.htm" target="_blank"><i class="fas fa-play "
+                                            style="font-size: 3rem;"></i></a> </div>
+                            </div>
+                            <div class="artist-nm text-align">
+                                <h3>Shawn Mendes</h3>
+                            </div>
+                        </div>
+
+                        <div class="artist">
+                            <div class="artist-img">
+                                <img src="Assets/Artists/katty_perry.jpg" alt="">
+                                <div class="pause-btn"><a href="SinglePlaylist.htm" target="_blank"><i class="fas fa-play "
+                                            style="font-size: 3rem;"></i></a> </div>
+                            </div>
+                            <div class="artist-nm text-align">
+                                <h3>Katty perry</h3>
+                            </div>
+                        </div>
+
+                        <div class="artist">
+                            <div class="artist-img">
+                                <img src="Assets/Artists/pharrell_williams.jpg" alt="">
+                                <div class="pause-btn"><a href="SinglePlaylist.htm" target="_blank"><i class="fas fa-play "
+                                            style="font-size: 3rem;"></i></a> </div>
+                            </div>
+                            <div class="artist-nm text-align">
+                                <h3>Pharrell</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stations -->
+                <div id="station-sec">
+                    <div id="stations">
+                        <div id="station-nm">
+                            <img src="Assets/station/station-image.jpg" alt="">
+                        </div>
+                        <div class="mood-songs">
+                            <img src="Assets/station/love1.jpg" alt="">
+                            <p class="mood-song-title">Love</p>
+                        </div>
+
+                        <div class="mood-songs">
+                            <img src="Assets/station/retro5.jpg" alt="">
+                            <p class="mood-song-title">Retro</p>
+                        </div>
+
+                        <div class="mood-songs">
+                            <img src="Assets/station/chill1.jpg" alt="">
+                            <p class="mood-song-title">Chill</p>
+                        </div>
+
+                        <div class="mood-songs">
+                            <img src="Assets/station/workout1.jpg" alt="">
+                            <p class="mood-song-title">Workout</p>
+                        </div>
+
+                        <div class="mood-songs">
+                            <img src="Assets/station/rock2.jpg" alt="">
+                            <p class="mood-song-title">Rock</p>
+                        </div>
+
+                        <div class="mood-songs">
+                            <img src="Assets/station/pop1.jpg" alt="">
+                            <p class="mood-song-title">Pop</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zoom-in section -->
+                <div id="zoom-in">
+                    <div class="div1">
+                        <img src="Assets/Mood/party4.jpg" alt="">
+                        <h3 class="titile">Party</h3>
+                    </div>
+
+                    <div class="div1">
+                        <img src="Assets/Mood/elec2.jpg" alt="">
+                        <h3 class="titile">Electronic</h3>
+                    </div>
+
+                    <div class="div1">
+                        <img src="Assets/Mood/rt4.jpg" alt="">
+                        <h3 class="titile">Road Trip</h3>
+                    </div>
+                </div>
+
+                <!-- Latest English -->
+                <div class="latest-english-hindi">
+                    <div class="headings">Latest English</div>
+                    <div class="eng-hindi-songs-list">
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/chill.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/cover.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/desert.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/creative.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/car.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/imagine.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Latest Hindi -->
+                <div class="latest-english-hindi">
+                    <div class="headings">Latest Hindi</div>
+                    <div class="eng-hindi-songs-list">
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/h1.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/h5.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/h10.webp" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/h7.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/h8.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/h12.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Latest Marathi -->
+                <div class="latest-english-hindi">
+                    <div class="headings">Latest Marathi</div>
+                    <div class="eng-hindi-songs-list">
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/m7.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/m3.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/m4.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/m5.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/m1.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+                        <div class="eng-hindi-songs">
+                            <div class="eng-hindi-song-img">
+                                <img src="Assets/English/m2.jpg" alt="">
+                            </div>
+                            <div class="eng-hindi-songs-nm">
+                                <h4>Onism</h4>
+                                <p>AUG 15,2021</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- d2 Section of side bar -->
+            <div id="d2">
+                <div id="side-bar-Que">
+                    <div id="title" class="text-color2">
+                        Queue
+                    </div>
+                    <div id="sm-title">
+                        <p>Queue</p>
+                    </div>
+                    <div id="q-icon">
+                        <i class="fas fa-chevron-down" onclick="QueFunction()"></i>
+                    </div>
+                </div>
+                <div id="side-bar-song-ls">
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>01</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/imagine.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Again</h4>
+                                <p>Wiz Knalifa</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>02</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/legion.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Sorry</h4>
+                                <p> Justin Bieber.</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>03</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/miss u.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Uptown Funk</h4>
+                                <p>Mark Ronson</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>04</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/old school.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Blank Space</h4>
+                                <p>Taylor Swift.</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>05</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/street.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Shake It Off</h4>
+                                <p>Taylor Swift.</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>06</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/relax.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Lean On</h4>
+                                <p> Major Lazer</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/show.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Roar</h4>
+                                <p>Kary Perry</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/h1.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/h2.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/h9.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/cover.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/1.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/2.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/2.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/2.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-songs">
+                        <div class="song">
+                            <div class="srno">
+                                <p>07</p>
+                            </div>
+                            <div class="side-bar-song-img">
+                                <img src="Assets/English/2.jpg" alt="">
+                            </div>
+                            <div class="side-bar-song-name">
+                                <h4>Mirage</h4>
+                                <p>Else</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="far fa-heart text-red"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="onclick-ls2">
+                <div id="onclick-ls2-playlist">Playlist</div>
+                <hr>
+                <div id="onclick-ls2-fav">Favourite Songs</div>
+            </div>
+
+            <!-- song bar section -->
+            <div id="song-bar">
+                <div class="inner-song-bar">
+                    <div class="song-bar-div1">
+                        <div class="a1">
+                            <img src="Assets/onism.jpg" alt="">
+                        </div>
+                        <div class="a2">
+                            <h3 class="text-color2">On and On</h3>
+                            <p class="text-color1">Drake Malfoy</p>
+                        </div>
+                        <div class="a3">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-ban"></i>
+                        </div>
+                    </div>
+                    <div class="song-bar-div2 text-color1">
+                        <div class="b1">
+                            <div class="b11"><i class="fas fa-random"></i></div>
+                            <div class="b12"><i class="fas fa-caret-left"></i></div>
+                            <div id="btn" class="text-color2">
+                                <i class="fas fa-play " onclick="togglePlay() " id="play"></i>
+                                <i class="fas fa-pause-circle" onclick="togglePlay() " id="pause"></i>
+                                <!-- <i class="fas fa-ellipsis-h text-color1" onclick="togglePlay() "></i> -->
+                            </div>
+                            <div id="hey">
+                                <audio controls id="audio-player">
+                                    <source src="Assets/Audio/a1.mpeg" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="b14"><i class="fas fa-caret-right"></i></div>
+                            <div class="b15"><i class="fab fa-rev"></i></div>
+                        </div>
+                        <div id="progress-bar">
+                            <div id="time1">2.34</div>
+                            <div id="progress">
+                                <div id="inner-div"></div>
+                                <div id="spot"></div>
+                            </div>
+                            <div id="time2">4.32</div>
+                        </div>
+                    </div>
+                    <div class="song-bar-div3 text-color1">
+                        <div class="c1"><i class="fas fa-stream"></i></div>
+                        <div class="c2"><i class="fas fa-volume-up"></i></div>
+                        <div class="c3"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script>
+        // onclick for Que
+        function QueDisplay(){
+            var d=document.getElementById("d2");
+
+            if(d.style.display == "none")
+            {
+                d.style.display = "block";
+            }
+            else{
+                d.style.display = "none";
+            }
+        }
+        // For click on que icon
+        function QueFunction() {
+            var t = document.getElementById("sm-title");
+            var i = document.getElementById("q-icon")
+            var q = document.getElementById("onclick-ls2");
+            if (q.style.display == "none") {
+                q.style.display = "block";
+            }
+            else {
+                q.style.display = "none";
+            }
+            i.style.color = "green";
+            t.style.color = "green";
+        }
+    </script>
+
+    <!-- Latest relaese -->
+    <script>
+        function myFunction1() {
+            var c = document.getElementById("onclick1-list1");
+
+            if (c.style.display == "none") {
+                c.style.display = "block";
+
+            }
+            else {
+                c.style.display = "none";
+
+            }
+        }
+        function myFunction2() {
+
+            var a = document.getElementById("onclick2-list1")
+            if (a.style.display == "none") {
+
+                a.style.display = "block"
+            }
+            else {
+
+                a.style.display = "none";
+            }
+        }
+    //Main song-bar
+        function Audio() {
+            var a = document.getElementById("song-bar");
+            var play1 = document.getElementById("play");
+
+            if (a.style.display == "none") {
+                a.style.display = "block";
+                play1.style.display = "block"
+            }
+            else {
+                a.style.display = "none";
+            }
+            // a.style.display = "block";
+        }
+
+        var audioElement = document.getElementById("audio-player");
+        var play1 = document.getElementById("play");
+        var pause1 = document.getElementById("pause");
+
+        function togglePlay() {
+            if (audioElement.paused) {
+                audioElement.play();
+                play1.style.display = "none";
+                pause1.style.display = "block"
+            }
+            else {
+                audioElement.pause();
+                play1.style.display = "block";
+                pause1.style.display = "none"
+            }
+        };
+
+
+    </script>
+
+    <!-- Mini song bar -->
+    <script>
+        function smplayer() {
+        
+            var a1 = document.getElementById("hey1");
+
+            if (a1.style.display == "none") {
+              
+                a1.style.display = "block";
+            }
+            else {
+               
+                a1.style.display = "none";
+            }
+           
+        }
+
+    </script>
+</body>
+
+</html>
