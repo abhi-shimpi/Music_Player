@@ -11,7 +11,108 @@
     <link rel="stylesheet" href="style.css" type="text/css">
    
 </head>
+<!-- 
+ GIT Commands
 
+1)git init 
+It is used to initialize git which creates .git file
+and it is also used to initialize empty reposiratory
+
+git init test
+
+2)git config
+It is used to config the user
+git config --global user.name " "
+git config --global user.email " "
+
+3)git clone 
+It is used to create local reposiratory of from exsting url. If i want copy of any repo
+on my local computer then clone command will allow to do it.
+
+git clone "https://..."
+or 
+git clone "https://..." name_of_repo
+
+4)git add 
+Used to add one or more file to staging 
+git add fileName
+OR 
+git add  .
+OR
+git add --all
+OR
+git add --a
+
+5)git commit 
+git commit -m " " => It records or snapshot any file permnantly in git version history
+git commit -a -m " " =>It adds and also commit changes in made in any files
+
+6)git status
+It shows status of current working directory staging area ,shows changes made in files and also displays all untracked files.
+
+7)git push
+git push origin master
+It is used to upload local repository content to a remote repository.
+
+8)git pull
+git pull URL
+Pull command is used to receive data from GitHub and fetch all data & make changes in current directory.
+OR
+PULL request-
+It is used to create a pull req to merge two branches
+
+9)git merge
+git merge branchName
+This command is used to merge the specified branch.
+
+10)git log
+Used to check commit history
+git log -3
+We can limit the number of log entries displayed by passing a number as an option, such as -3 to show only the last three entries.
+
+11)git branch
+lsit all branches available in repo.
+
+12)git remote
+git remote add origin "URLof repo"
+Git Remote command is used to connect your local repository to the remote server.
+
+13)git checkout
+git checkout -b newBranchName
+It is used to create new branch
+OR
+git checkout master => Used to switch another branch
+
+14)git stash
+It helps you to save changes that you are not ready to commit .You can stash changes & come back to them later.
+TO come back - git stash apply
+
+15)git revert
+git revert hashCode of commit
+We did a commit say C2 and now we want to go to commit C1 .It can be done by using
+git revert hashCode of C2 commit.
+
+16)git rebase
+Used to merge two branches.
+Just show all logs without branchNames.
+
+17)rm -rf .git
+To delete git repo
+
+18)git diff
+Compares working directory and staging area
+
+19)git restore 
+It used to unstage any file.
+git restore --unstage index.html
+git restore index.html
+
+
+
+
+
+-->
+    
 <body>
     <!-- In this page there two sectio Navbar and Main Section
         Navbar section contains 1) Normal Navbar 2)Small Navbar
